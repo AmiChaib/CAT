@@ -49,3 +49,4 @@ To provide transparency, journalists must ensure the reliability of their source
 These principles collectively form a code of conduct that guides journalists in serving the public interest and thereby upholding an essential basis for justice and democracy. Read more about journalism ethics and related organisation's standards in the [Research Document]()
 `TODO: Add link to research doc`
 
+More categories are possible, for the MVP we will focus on logical fallacies and depending on time might go into Journalism Ethics.
