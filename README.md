@@ -19,6 +19,7 @@ Important steps of critical text analysis include
 - critical reading to identify the author's thesis and main arguments
 - summarizing the text to capture its core ideas
 - considering the author's background and evidence
+
 It is crucial to question the author's viewpoint, assess their arguments' quality, and evaluate their claims' strengths and weaknesses. A more thorough understanding of the text can be achieved through this methodology, leading to biases being more easily spotted and the validity of arguments being more easily assessed. Critical text analysis is a valuable skill that allows readers to engage with texts more meaningfully and thoughtfully.
 
 ### UI
