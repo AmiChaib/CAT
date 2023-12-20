@@ -1,4 +1,4 @@
-# CAT
+# Critical Analysis Tool - CAT
 Critical Analysis Tool using a large language model (LLM) and Streamlit to build an application for support in analysing texts or news articles.
 
 ## General
@@ -6,10 +6,12 @@ Some support for getting into the topic and understanding the project.
 
 ### Elaboration on the word critical in the current context
 “Critical” here as described in the third definition in the Britannica Dictionary:
-> "Using or involving careful judgement about the good and bad parts of something
-- The program presents a *critical* analysis of the government's strategies
-- She has a talent for *critical* thinking
-- We need to look at these proposed changes **with a critical eye** before we accept them"
+> "
+> Using or involving careful judgement about the good and bad parts of something
+> - The program presents a *critical* analysis of the government's strategies
+> - She has a talent for *critical* thinking
+> - We need to look at these proposed changes **with a critical eye** before we accept them
+> "
 
 ### Critical Text Analysis
 Critical text analysis is part of evaluating and interpreting texts with the requirement of a comprehensive and objective approach. 
