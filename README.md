@@ -1,8 +1,21 @@
 # Critical Analysis Tool - CAT
 Critical Analysis Tool using a large language model (LLM) and Streamlit to build an application for support in analysing texts or news articles.
 
+## Overview
+### Repository Structure
+- **/docs** contains all documentation that has been created for the project
+- **/experiments** contains notebooks and trial codes preparing for the actual implementation
+- **/src** will contain the source code for the application.
+
+### Current standings
+- First steps in creating an [application](./experiments/data-challenge-amira-iris.py)
+- First steps for creating an [algorithm to detect logical fallacies](experiments/cat_trial.ipynb) in an example text
+
+### Going forward
+The Streamlit application will be deployed and a link to it provided.
+
 ## General
-Some support for getting into the topic and understanding the project.
+Some general support for getting into the topic of critical analysis and understanding the project.
 
 ### Elaboration on the word critical in the current context
 “Critical” here as described in the third definition in the Britannica Dictionary:
@@ -41,12 +54,10 @@ A category can be defined as follows:
 `TODO: Define category in the context of critical analysis tool`
 
 #### Logical Fallacies
-Logical fallacies represent types of reasoning that are flawed or misleading, setting them apart from subjective claims or those refutable by factual evidence. A position is deemed a logical fallacy if it contains inherent logical errors or deceptive elements. Some of the most commonly known ones are the Ad Hominem, Straw Man, and Slippery Slope. Read an explanation about these arguments and more types of arguments in the [Research Document]() 
-`TODO: Add link to research doc`
+Logical fallacies represent types of reasoning that are flawed or misleading, setting them apart from subjective claims or those refutable by factual evidence. A position is deemed a logical fallacy if it contains inherent logical errors or deceptive elements. Some of the most commonly known ones are the Ad Hominem, Straw Man, and Slippery Slope. Read an explanation about these arguments and more types of arguments in the [Research Document](docs/Research.pdf)
 
 #### Journalism Ethics
 To provide transparency, journalists must ensure the reliability of their sources and disclose source motivations and conditions for providing information, particularly in sensitive or conflict situations. 
-These principles collectively form a code of conduct that guides journalists in serving the public interest and thereby upholding an essential basis for justice and democracy. Read more about journalism ethics and related organisation's standards in the [Research Document]()
-`TODO: Add link to research doc`
+These principles collectively form a code of conduct that guides journalists in serving the public interest and thereby upholding an essential basis for justice and democracy. Read more about journalism ethics and related organisation's standards in the [Research Document](docs/Research.pdf)
 
 More categories are possible, for the MVP we will focus on logical fallacies and depending on time might go into Journalism Ethics.
