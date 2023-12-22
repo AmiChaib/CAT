@@ -3,9 +3,9 @@ Critical Analysis Tool using a large language model (LLM) and Streamlit to build
 
 ## Overview
 ### Repository Structure
-- **/docs** contains all documentation that has been created for the project
-- **/experiments** contains notebooks and trial codes preparing for the actual implementation
-- **/src** will contain the source code for the application.
+- [**/docs**](docs) contains all documentation that has been created for the project
+- [**/experiments**](experiments) contains notebooks and trial codes preparing for the actual implementation
+- [**/src**](src) will contain the source code for the application.
 
 ### Current standings
 - First steps in creating an [application](./experiments/data-challenge-amira-iris.py)
