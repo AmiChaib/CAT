@@ -46,7 +46,7 @@ It is crucial to question the author's viewpoint, assess their arguments' qualit
 - Display a legend connecting each colour to a category
 - In the solid text highlight the text pieces recognised as belonging to a category by the system in the respective colour
 - When hovering over the highlighted section, make an explanation appear for why the section is recognised as belonging to the category and/or how it would be done correctly.
-`TODO: Insert Wireframe`
+[Wireframe after submitting text, highlighted logical fallacies in text](docs/IMG-20231222-WA0000.jpg)
 
 ### Defining categories
 The use of LLM allows for a broader analysis of texts than using a narrower model that is only trained on assessing one specific category.
