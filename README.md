@@ -40,12 +40,14 @@ It is crucial to question the author's viewpoint, assess their arguments' qualit
 - Submit an input text, which could be a textarea to copy/paste the text into, an upload for PDF/docx/txt files, or a link to a text on a website (-> start with copy/paste for simplicity)
 - Select (multiple) categories to analyse the text for (logical fallacies, journalistic standards, possible critical questions to ask)
 - Submit text -> text field transforms to / extracted text displayed as ‘solid text’ on background -> loading animation
-`TODO: Insert Wireframe`
+
+![Wireframe startpage, select categories, insert and submit text](docs/IMG-20231222-WA0001.jpg)
 
 **Outputs** of the system should be visualised through colour highlighting per selected category.
 - Display a legend connecting each colour to a category
 - In the solid text highlight the text pieces recognised as belonging to a category by the system in the respective colour
 - When hovering over the highlighted section, make an explanation appear for why the section is recognised as belonging to the category and/or how it would be done correctly.
+
 ![Wireframe after submitting text, highlighted logical fallacies in text](docs/IMG-20231222-WA0000.jpg)
 
 ### Defining categories
