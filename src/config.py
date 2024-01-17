@@ -5,6 +5,8 @@ env_file = './.env'
 dotenv.load_dotenv(env_file, override=True)
 OPENAI_API_KEY = environ.get('OPENAI_API_KEY')
 
+CATEGORY_OPTIONS = {"option 1", "option 2", "option 3", "option 4", "option 5", "option 6"}
+
 CUSTOM_CSS = """
 <style>
     .highlight {

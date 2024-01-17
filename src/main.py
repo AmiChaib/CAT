@@ -1,69 +1,45 @@
 import streamlit as st
-from openai import OpenAI
-import json
+from prompts.roles import roles
+from langchain.llms import OpenAI
+from container import container
+from config import OPENAI_API_KEY, CUSTOM_CSS, CATEGORY_OPTIONS
+from prompts.prompt_templates import FALLACIES_PROMPT_TEMPLATE, POLITICAL_INTENT_PROMPT_TEMPLATE, PROMPT_TEMPLATE
+from exceptions.no_category_selected_exception import NoCategorySelectedException
+from exceptions.no_text_provided_exception import NoTextProvidedException
+from warning import warning
 
-from config import OPENAI_API_KEY, CUSTOM_CSS
-from categories import CATEGORY_OPTIONS
-
-# function to detect logical fallacies with the use of the prompts. It then processes the response to extract and return the identified fallacies and the modified text with highlights.
-def detect_logical_fallacies(text):
-    # initializing the OpenAI API key
-    client = OpenAI(
-        api_key=OPENAI_API_KEY
-    )
-    model = "gpt-4-1106-preview"
-    response_format = {"type": "json_object"} # format should b a JSON object
-    messages = [
-        {"role": "system", "content": "Your task is to analyze the provided text and identify any logical fallacies present. Logical fallacies are errors in reasoning that can include 'Strawman', 'False Dilemma', 'Slippery Slope', 'Ad Hominem', 'Appeal to Ignorance', and others."},
-        {"role": "system", "content": "First, focus on identifying the fallacies. If you find a logical fallacy, name the type of fallacy you have identified."},
-        {"role": "system", "content": "Then, modify the text by highlighting the specific part where the fallacy occurs. Use HTML styling for the highlight, applying a background color with a corner radius of 5px. For example, highlight a 'False Dilemma' fallacy in pink. Provide the modified text as a JSON object containing the HTML-formatted string that visually indicates the parts of the text containing the logical fallacies."},
-        {"role": "user", "content": text}
-    ]
-
-    # sending the request to the API
-    try:
-        response = client.chat.completions.create(
-            model=model,
-            messages=messages,
-            response_format=response_format,
-            temperature=0.3,
-        )
-
-        # extracting the logical fallacy and modified text from the response
-        if response.choices:
-            response_json = json.loads(response.choices[0].message.content)
-            modified_html_text = response_json.get("text", "")
-            logical_fallacy = response_json.get("logical_fallacy", "No fallacy detected") 
-            return logical_fallacy, modified_html_text
-        else:
-            return "Error", "No choices available in the response"
-
-    # handling exceptions, if there are, it will return an error message
-    except Exception as e:
-        print(e)
-        return "Error", str(e)
+def get_prompt(is_log_fal, is_pol_int):
+    if is_log_fal:
+        return [FALLACIES_PROMPT_TEMPLATE, roles['logical fallacies']]
+    elif is_pol_int:
+        return [POLITICAL_INTENT_PROMPT_TEMPLATE, roles['political intent']]
+    else:
+        raise NoCategorySelectedException
+    
+# def process_results(results):
+#     keys = ['identified_section', 'fallacy_name', 'identified_fallacy_explanation']
 
 def main():
-    st.title("Hello World")
     # adding the custom CSS into the Streamlit app
     st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
     st.title("Critical Analysis Tool")
+    if warning.is_warning:
+        st.warning(warning.content)
     st.markdown("Input your text and click submit to analyze it.")
-
     user_input = st.text_area("Enter your text:", height=300)
 
     # putting the checkboxes into columns, so that 2 will be below each other
     col1, col2, col3, col4 = st.columns(4)
-    col1.checkbox("hello")
-    col1.checkbox("hello1")
-    col2.checkbox("hello2")
-    col2.checkbox("hello3")
-    col3.checkbox("hello4")
-    col3.checkbox("hello5")
+    log_fal = col1.checkbox("Logical Fallacies")
+    col1.checkbox("Category 2...")
+    pol_int = col2.checkbox("Political Intent")
+    col2.checkbox("Category 3...")
+    col3.checkbox("Category 4...")
+    col3.checkbox("Category 5...")
     submit_button = col4.button("Submit")
 
     # Convert the set to a list
-    logical_fallacies = sorted(list(CATEGORY_OPTIONS))
+    categories = sorted(list(CATEGORY_OPTIONS))
 
     # When the submit button is clicked
     if submit_button:
@@ -71,21 +47,38 @@ def main():
         st.markdown("")
         st.markdown("")
         st.markdown("")
+        
         # Create three columns for the logical fallacies
         col1, col2, col3 = st.columns(3)
 
         # Place two logical fallacies in each column with highlight
         for i in range(6):
             current_col = [col1, col2, col3][i % 3]
-            current_col.markdown(f'<p class="highlight" id="highlight{i}">{logical_fallacies[i]}</p>', unsafe_allow_html=True)
+            current_col.markdown(f'<p class="highlight" id="highlight{i}">{categories[i]}</p>', unsafe_allow_html=True)
         
         # Detect logical fallacies and display results
-        logical_fallacy, highlighted_text = detect_logical_fallacies(user_input)
-        st.markdown("")
-        st.markdown("")
-        st.markdown("")
-        st.markdown(f"Logical Fallacy Detected: {logical_fallacy}", unsafe_allow_html=True)
-        st.markdown(highlighted_text, unsafe_allow_html=True)
+        try:
+            if user_input:
+                warning.set_warning(False, None)
+                try:
+                    prompt = get_prompt(log_fal, pol_int)
+                    template = prompt[0]
+                    role = prompt[1]
+                    model = OpenAI(model_name="gpt-3.5-turbo-instruct")
+                    results = container.client.detect_logical_fallacies(model, role, template, user_input)
+                    # processed_results = process_results(results)
+                    with st.sidebar:
+                        st.title("Explanation")
+                        st.markdown(f"Logical Fallacy Detected: {results}", unsafe_allow_html=True)
+                except NoCategorySelectedException as e:
+                    warning.set_warning(True, e)                
+            else:
+                raise NoTextProvidedException
+        except Exception as e:
+            warning.set_warning(True, e)
+            
+
+        #st.markdown(highlighted_text, unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()

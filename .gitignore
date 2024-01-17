@@ -1,3 +1,5 @@
 src/.env
 
 src/.env.bak
+
+src/__pycache__/
