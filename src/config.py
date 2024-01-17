@@ -9,6 +9,15 @@ CATEGORY_OPTIONS = {"option 1", "option 2", "option 3", "option 4", "option 5", 
 
 CUSTOM_CSS = """
 <style>
+    
+    img{
+       width: 100px;
+       height: 100px;
+       margin-left: 27.5%;
+       border-radius: 50%; 
+       object-fit: cover;
+    }
+    
     .highlight {
         display: flex;
         justify-content: center;

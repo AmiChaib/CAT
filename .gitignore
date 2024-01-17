@@ -3,3 +3,5 @@ src/.env
 src/.env.bak
 
 src/__pycache__/
+
+src/exceptions/__pycache__/

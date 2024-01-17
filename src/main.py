@@ -22,7 +22,7 @@ def get_prompt(is_log_fal, is_pol_int):
 def main():
     # adding the custom CSS into the Streamlit app
     st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
-    st.title("Critical Analysis Tool")
+    st.markdown("# Critical Analysis Tool ![Cat GIF](https://media3.giphy.com/media/VbnUQpnihPSIgIXuZv/200w.gif)")
     if warning.is_warning:
         st.warning(warning.content)
     st.markdown("Input your text and click submit to analyze it.")
@@ -76,7 +76,7 @@ def main():
                 raise NoTextProvidedException
         except Exception as e:
             warning.set_warning(True, e)
-            
+    st.markdown("")
 
         #st.markdown(highlighted_text, unsafe_allow_html=True)
 
