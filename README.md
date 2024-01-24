@@ -62,4 +62,4 @@ Logical fallacies represent types of reasoning that are flawed or misleading, se
 To provide transparency, journalists must ensure the reliability of their sources and disclose source motivations and conditions for providing information, particularly in sensitive or conflict situations. 
 These principles collectively form a code of conduct that guides journalists in serving the public interest and thereby upholding an essential basis for justice and democracy. Read more about journalism ethics and related organisation's standards in the [Research Document](docs/Research.pdf)
 
-More categories are possible, for the MVP we will focus on logical fallacies and depending on time might go into Journalism Ethics.
+More categories are possible, for the MVP we have added logical fallacies and political intent as categories.
