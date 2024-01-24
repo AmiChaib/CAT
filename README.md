@@ -13,7 +13,9 @@ Critical Analysis Tool using a large language model (LLM) and Streamlit to build
 - First prototype as [Streamlit app](src/main.py), can be run with `streamlit run <file>` command if streamlit is installed. The prototype has no text highlighting, the recommendation is to switch to a non-Streamlit framework for adding the text highlighting
 
 ### Going forward
-The Streamlit application will be deployed and a link to it provided.
+~~The Streamlit application will be deployed and a link to it provided.~~
+- Find a frontend framework, for example: React, or Vue, or even plain JS, and create the frontend in one of these frameworks.
+- Build an API to pull the results from, FastAPI is suitable
 
 ## General
 Some general support for getting into the topic of critical analysis and understanding the project.
