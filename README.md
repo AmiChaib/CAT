@@ -52,8 +52,7 @@ It is crucial to question the author's viewpoint, assess their arguments' qualit
 
 ### Defining categories
 The use of LLM allows for a broader analysis of texts than using a narrower model that is only trained on assessing one specific category.
-A category can be defined as follows:
-`TODO: Define category in the context of critical analysis tool`
+A category can be defined as any structure that can be detected in texts. It has to be manually added to the code currently by adding a new checkbox in the UI, a new prompt for the specific category and connecting these. This could be created more dynamically by creating a general prompt and letting the user input their preferred category. The downside of this is that the prompt cannot be optimised for the current use case.
 
 #### Logical Fallacies
 Logical fallacies represent types of reasoning that are flawed or misleading, setting them apart from subjective claims or those refutable by factual evidence. A position is deemed a logical fallacy if it contains inherent logical errors or deceptive elements. Some of the most commonly known ones are the Ad Hominem, Straw Man, and Slippery Slope. Read an explanation about these arguments and more types of arguments in the [Research Document](docs/Research.pdf)
