@@ -10,6 +10,7 @@ Critical Analysis Tool using a large language model (LLM) and Streamlit to build
 ### Current standings
 - First steps in creating an [application](./experiments/data-challenge-amira-iris.py)
 - First steps for creating an [algorithm to detect logical fallacies](experiments/cat_trial.ipynb) in an example text
+- First prototype as [Streamlit app](src/main.py), can be run with `streamlit run <file>` command if streamlit is installed. The prototype has no text highlighting, the recommendation is to switch to a non-Streamlit framework for adding the text highlighting
 
 ### Going forward
 The Streamlit application will be deployed and a link to it provided.
