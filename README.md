@@ -57,7 +57,7 @@ It is crucial to question the author's viewpoint, assess their arguments' qualit
 The use of LLM allows for a broader analysis of texts than using a narrower model that is only trained on assessing one specific category.
 A category can be defined as any structure that can be detected in texts. It has to be manually added to the code currently by adding a new checkbox in the UI, a new prompt for the specific category and connecting these. This could be created more dynamically by creating a general prompt and letting the user input their preferred category. The downside of this is that the prompt cannot be optimised for the current use case.
 
-Other ideas for categories (use cases), that came up in an interview with coordinators of the AI for journalism, Iman Mossavat and Berry Sanders:
+Other ideas for categories (use cases), that came up in an interview with coordinators of AI for journalism, Iman Mossavat and Berry Sanders:
 - Use case: for finding out of character topics
 - Use case: for analysing the build-up of an argument
 - Use case: for analysing decision making
