@@ -14,7 +14,7 @@ Critical Analysis Tool using a large language model (LLM) and Streamlit to build
 
 ### Going forward
 ~~The Streamlit application will be deployed and a link to it provided.~~
-- Find a frontend framework, for example: React, or Vue, or even plain JS, and create the frontend in one of these frameworks.
+- Find a frontend framework, for example, React, Vue, or even plain JS, and create the frontend in one of these frameworks.
 - Build an API to pull the results from, FastAPI is suitable
 
 ## General
@@ -23,7 +23,7 @@ Some general support for getting into the topic of critical analysis and underst
 ### Elaboration on the word critical in the current context
 “Critical” here as described in the third definition in the Britannica Dictionary:
 > "
-> Using or involving careful judgement about the good and bad parts of something
+> Using or involving careful judgment about the good and bad parts of something
 > - The program presents a *critical* analysis of the government's strategies
 > - She has a talent for *critical* thinking
 > - We need to look at these proposed changes **with a critical eye** before we accept them
@@ -57,11 +57,20 @@ It is crucial to question the author's viewpoint, assess their arguments' qualit
 The use of LLM allows for a broader analysis of texts than using a narrower model that is only trained on assessing one specific category.
 A category can be defined as any structure that can be detected in texts. It has to be manually added to the code currently by adding a new checkbox in the UI, a new prompt for the specific category and connecting these. This could be created more dynamically by creating a general prompt and letting the user input their preferred category. The downside of this is that the prompt cannot be optimised for the current use case.
 
+Other ideas for categories (use cases), that came up in an interview with coordinators of the AI for journalism, Iman Mossavat and Berry Sanders:
+- Use case: for finding out of character topics
+- Use case: for analysing the build-up of an argument
+- Use case: for analysing decision making
+- Use case: search related papers
+- Category: Hate Speech
+- Category: Sarcasm
+ 
+
 #### Logical Fallacies
 Logical fallacies represent types of reasoning that are flawed or misleading, setting them apart from subjective claims or those refutable by factual evidence. A position is deemed a logical fallacy if it contains inherent logical errors or deceptive elements. Some of the most commonly known ones are the Ad Hominem, Straw Man, and Slippery Slope. Read an explanation about these arguments and more types of arguments in the [Research Document](docs/Research.pdf)
 
 #### Journalism Ethics
 To provide transparency, journalists must ensure the reliability of their sources and disclose source motivations and conditions for providing information, particularly in sensitive or conflict situations. 
-These principles collectively form a code of conduct that guides journalists in serving the public interest and thereby upholding an essential basis for justice and democracy. Read more about journalism ethics and related organisation's standards in the [Research Document](docs/Research.pdf)
+These principles collectively form a code of conduct that guides journalists in serving the public interest and thereby upholding an essential basis for justice and democracy. Read more about journalism ethics and related organisation standards in the [Research Document](docs/Research.pdf)
 
 More categories are possible, for the MVP we have added logical fallacies and political intent as categories.
