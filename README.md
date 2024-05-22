@@ -11,11 +11,15 @@ Critical Analysis Tool using a large language model (LLM) and Streamlit to build
 - Experiments for [application](./experiments/data-challenge-amira-iris.py)
 - First [algorithm to detect logical fallacies](experiments/cat_trial.ipynb) in an example text
 - [Streamlit app](src/main.py), can be run with `streamlit run <file>` command if streamlit is installed. The prototype has no text highlighting, the recommendation is to switch to a non-Streamlit framework for adding the text highlighting
+- Improve prompts
+- Make prompts for dynamically adding categories
 
 ### Going forward
 ~~The Streamlit application will be deployed and a link to it provided.~~
 - Find a frontend framework, for example, React, Vue, or even plain JS, and create the frontend in one of these frameworks.
 - Build an API to pull the results from, FastAPI is suitable
+- Improve prompts
+- Add categories or make entire process completely dynamic
 
 ## General
 Some general support for getting into the topic of critical analysis and understanding the project.
