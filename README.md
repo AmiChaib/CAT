@@ -1,8 +1,9 @@
+# Demo
+#### (--> Repository overview below)
+![Demo of CAT](docs/Demo.gif)
+
 # Critical Analysis Tool - CAT
 Critical Analysis Tool using a large language model (LLM) and Streamlit to build an application for support in analysing texts or news articles.
-
-## Demo
-![Demo of CAT](docs/Demo.gif)
 
 ## Overview
 ### Repository Structure
