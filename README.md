@@ -1,4 +1,4 @@
-<h1>Demo</h1> `(--> Repository overview below)`
+<h1>Demo</h1> <i>(--> Repository overview below)</i>
 
 ![Demo of CAT](docs/Demo.gif)
 
