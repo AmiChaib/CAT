@@ -14,7 +14,10 @@ The application itself is broken down into a front end (cat-ui) and a back end (
 - cat-ui is a Single Page Web Application written in Vue.js with two routes: */input* and */result*
 - cat-api is a python application using [FastAPI](https://fastapi.tiangolo.com/) and [LangChain](https://www.langchain.com/)
 
-### Next steps
+### Next steps (ideas)
+- Improve looks of the GUI
+- Improve UX
+- Use streams to highlight text in real-time
 - Use custom categories defined by the user
 - Analysis of argument structure
 
