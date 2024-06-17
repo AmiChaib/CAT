@@ -1,25 +1,22 @@
 # Critical Analysis Tool - CAT
 Critical Analysis Tool using a large language model (LLM) and Streamlit to build an application for support in analysing texts or news articles.
 
+## Demo
+![Demo of CAT](docs/Demo.gif)
+
 ## Overview
 ### Repository Structure
 - [**/docs**](docs) contains all documentation that has been created for the project
 - [**/experiments**](experiments) contains notebooks and trial codes preparing for the actual implementation
-- [**/src**](src) will contain the source code for the application.
+- [**/src**](src) contains the source code for the application.
 
-### Current standings
-- Experiments for [application](./experiments/data-challenge-amira-iris.py)
-- First [algorithm to detect logical fallacies](experiments/cat_trial.ipynb) in an example text
-- [Streamlit app](src/main.py), can be run with `streamlit run <file>` command if streamlit is installed. The prototype has no text highlighting, the recommendation is to switch to a non-Streamlit framework for adding the text highlighting
-- Improve prompts
-- Make prompts for dynamically adding categories
+The application itself is broken down into a front end (cat-ui) and a back end (cat-api).
+- cat-ui is a Single Page Web Application written in Vue.js with two routes: */input* and */result*
+- cat-api is a python application using [FastAPI](https://fastapi.tiangolo.com/) and [LangChain](https://www.langchain.com/)
 
-### Going forward
-~~The Streamlit application will be deployed and a link to it provided.~~
-- Find a frontend framework, for example, React, Vue, or even plain JS, and create the frontend in one of these frameworks.
-- Build an API to pull the results from, FastAPI is suitable
-- Improve prompts
-- Add categories or make entire process completely dynamic
+### Next steps
+- Use custom categories defined by the user
+- Analysis of argument structure
 
 ## General
 Some general support for getting into the topic of critical analysis and understanding the project.
@@ -41,6 +38,8 @@ Important steps of critical text analysis include
 - considering the author's background and evidence
 
 It is crucial to question the author's viewpoint, assess their arguments' quality, and evaluate their claims' strengths and weaknesses. A more thorough understanding of the text can be achieved through this methodology, leading to biases being more easily spotted and the validity of arguments being more easily assessed. Critical text analysis is a valuable skill that allows readers to engage with texts more meaningfully and thoughtfully.
+
+## Design and Approach
 
 ### UI
 **Inputs** to the system should be made through a simple, user-friendly form. The design should include intuitive input actions/controls.
