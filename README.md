@@ -1,4 +1,5 @@
 <h1>Demo</h1> `(--> Repository overview below)`
+
 ![Demo of CAT](docs/Demo.gif)
 
 # Critical Analysis Tool - CAT
