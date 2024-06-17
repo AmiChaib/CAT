@@ -1,5 +1,4 @@
-# Demo
-#### (--> Repository overview below)
+# Demo `(--> Repository overview below)`
 ![Demo of CAT](docs/Demo.gif)
 
 # Critical Analysis Tool - CAT
